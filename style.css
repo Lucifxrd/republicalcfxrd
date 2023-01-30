@@ -12,29 +12,85 @@ header {
     justify-content: center;
     margin-inline: auto;
     padding: 2%;
-    margin-bottom: 3%;
+    margin-bottom: .5rem;
     text-align: center;
     background: linear-gradient(red,orange,green);
 }
 
 section {
-    width: 30%;
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.674);
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10%;
     border-radius: 8.5%;
     background: linear-gradient(purple,lime);
     margin-inline:auto;
+    height: fit-content;
 }
 section div {
-    width: 10rem;
+    padding: .5rem;
+    background-color: tomato;
+    width: 95%;
     margin-top: 15px;
-    height: 20rem;
+    margin-inline:auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    row-gap: .3rem;
+    align-items: center;
     overflow: hidden;
     outline: rgb(28, 28, 28) solid 8px;
+    border-radius: 8.5%;
+    animation: yellowbluedivoutline 2s linear infinite;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    justify-content: center;
 }
-section div img {
+section div img,video {
     outline: red dotted .4rem;
+    animation: MediaNeonGreenoutline 2s linear infinite;
+    
+}
+
+@keyframes yellowbluedivoutline {
+    0%
+    {
+        box-shadow: 10px 10px 10px 10px yellow;
+        animation: yellowbluedivoutline 1s infinite;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+    100%
+    {
+        box-shadow: 0px 0px 0px 2px yellow;
+        animation: yellowbluedivoutline 1s infinite;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }   
+
+
+}
+@keyframes MediaNeonGreenoutline {
+    0%
+    {
+        box-shadow: 10px 10px 10px rgb(3, 247, 255);
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+    100%
+    {
+        box-shadow: 7px 7px 7px 7px yellow;
+        animation: MediaNeonGreenoutline 1s infinite;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
 }
